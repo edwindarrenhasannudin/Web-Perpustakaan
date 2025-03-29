@@ -20,6 +20,7 @@
 }
 
 .header-title{
+    text-indent: 2.5em;
     margin-top: auto;
     margin-bottom: auto;
 }
@@ -69,6 +70,123 @@
 .konten h2{
     font-size: 22px;
     color: darkgreen;
+}
+
+p {
+    text-align: center;
+}
+  
+/* Typing-animation */
+
+.typing-container {
+    min-height: 60px; /* Sesuaikan dengan tinggi teks */
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.typing-animation {
+  border-right: 3px solid #2c3e50; /* Kursor */
+  padding-right: 5px;
+  white-space: nowrap;
+  overflow: hidden;
+  display: inline-block;
+}
+
+/* Animasi kedip kursor */
+@keyframes blink {
+  0%, 100% { border-color: transparent; }
+  50% { border-color: #2c3e50; }
+}
+
+.typing-animation {
+  animation: blink 0.75s step-end infinite;
+}
+
+/* highlight */
+
+.highlight {
+    font-style: italic;
+    color: #e74c3c;
+    text-align: center;
+    margin: 1.5rem 0;
+    font-size: 1.1rem;
+}
+
+/* Card */
+
+.collection-section {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.collection-card {
+    background-color: #e9ecef;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+}
+
+.collection-card:hover {
+    transform: translateY(-5px);
+}
+
+.collection-card h3 {
+    color: #2c3e50;
+    margin-bottom: 1rem;
+    border-left: 4px solid #f39c12;
+    padding-left: 0.5rem;
+}
+
+/* Style untuk section Fasilitas */
+.facilities-section {
+    background-color: #ffffff;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    margin: 2rem 0;
+}
+  
+.facilities-section h2 {
+  color: darkgreen;
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 3px solid #f39c12;
+  display: inline-block;
+}
+
+.facilities-list {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1rem;
+}
+  
+.facilities-list li {
+  position: relative;
+  padding-left: 2rem;
+  margin-bottom: 0.8rem;
+  line-height: 1.6;
+  color: #495057;
+  transition: transform 0.3s ease;
+}
+
+.facilities-list li:hover {
+  transform: translateX(5px);
+  color: #2c3e50;
+}
+
+.facilities-list li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: #27ae60;
+  font-weight: bold;
+  font-size: 1.1rem;
 }
 
 /* tabel */
@@ -151,3 +269,13 @@ td>img{
 .btn:active{
     background-color: pink;
 }
+
+/* Footer */
+
+footer {
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 1.5rem;
+    margin-top: 2rem;
+} 
